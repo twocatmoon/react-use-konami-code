@@ -1,0 +1,51 @@
+{
+  "name": "@twocatmoon/react-use-konami-code",
+  "version": "0.1.1",
+  "private": false,
+  "description": "Call a function when a sequence of key presses is detected.",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && tsc --project tsconfig.build.json && npm run docs:build",
+    "docs:dev": "npm run docs:build & npx http-server docs",
+    "docs:build": "npx typedoc src/lib/index.ts --customCss ./docStyles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twocatmoon/react-use-konami-code.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "konami code",
+    "cheat code",
+    "easter egg"
+  ],
+  "author": "Two-Cat Moon Digital Media",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twocatmoon/react-use-konami-code/issues"
+  },
+  "homepage": "https://github.com/twocatmoon/react-use-konami-code#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "typedoc": "^0.22.13",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  }
+}
